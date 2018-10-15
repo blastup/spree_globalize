@@ -9,6 +9,12 @@
 
               <div class="pull-right text-muted">
                 <small><i><%= Spree.t(:'i18n.this_file_language') %></i></small>
+
+                <% if locale.to_s === 'en' %>
+                  <%= flag_icon(:gb, squared: false) %>
+                <% elsif locale.to_s === 'el' %>
+                  <%= flag_icon(:gr, squared: false) %>
+                <% end %>
               </div>
             <% end %>
           </div>
